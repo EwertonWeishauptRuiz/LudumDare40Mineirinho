@@ -196,25 +196,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &551735984 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1920076141874066, guid: 0d3fdb3179c10be4da977795763a39ad,
-    type: 2}
-  m_PrefabInternal: {fileID: 1959336929}
---- !u!64 &551735985
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 551735984}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 7fddef0cc464116438a47a0fd80682da, type: 3}
 --- !u!1 &838030294
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,22 +331,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 114604040263580292, guid: 0d3fdb3179c10be4da977795763a39ad,
-        type: 2}
-      propertyPath: spawnPlace
-      value: 
-      objectReference: {fileID: 1929205527}
     - target: {fileID: 1077737705252220, guid: 0d3fdb3179c10be4da977795763a39ad, type: 2}
       propertyPath: m_Name
       value: ArrowWall (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4321429902965164, guid: 0d3fdb3179c10be4da977795763a39ad, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -180.00002
-      objectReference: {fileID: 0}
-    - target: {fileID: 1077737705252220, guid: 0d3fdb3179c10be4da977795763a39ad, type: 2}
-      propertyPath: m_TagString
-      value: Wall
+    - target: {fileID: 114604040263580292, guid: 0d3fdb3179c10be4da977795763a39ad,
+        type: 2}
+      propertyPath: reversePosition
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d3fdb3179c10be4da977795763a39ad, type: 2}
@@ -1276,11 +1249,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1929205527 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4557182889377484, guid: 0d3fdb3179c10be4da977795763a39ad,
-    type: 2}
-  m_PrefabInternal: {fileID: 980232204}
 --- !u!4 &1945766916 stripped
 Transform:
   m_PrefabParentObject: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
@@ -1408,8 +1376,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 65968889231376936, guid: 0d3fdb3179c10be4da977795763a39ad, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d3fdb3179c10be4da977795763a39ad, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1993024744
