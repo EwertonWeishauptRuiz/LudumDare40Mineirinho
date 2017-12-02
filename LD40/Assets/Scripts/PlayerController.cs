@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         GetInput();
-        Turn();
+        //Turn();
         
     }
 
@@ -87,16 +87,17 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    void Run()
-    {
-        if (Mathf.Abs(forwardInput) > inputSettings.inputDelay)
-        {
+    void Run() {
+        if (Mathf.Abs(forwardInput) > inputSettings.inputDelay) {
             // Move
             velocity.z = moveSettings.forwardVel * forwardInput;
-        }
-        else
-        {
+        } else {
             velocity.z = 0;
+        }
+        if (Mathf.Abs(turnInput) > inputSettings.inputDelay) {
+            velocity.x = moveSettings.forwardVel * turnInput;
+        } else {
+            velocity.x = 0;
         }
     }
 
