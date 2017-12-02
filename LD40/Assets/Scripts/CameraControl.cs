@@ -56,7 +56,8 @@ public class CameraControl : MonoBehaviour
 
     void LookAtTarget()
     {
-        float eulerYangle = Mathf.SmoothDampAngle(transform.eulerAngles.y, target.localEulerAngles.y, ref rotateVel, lookSmoth);
-        transform.rotation = Quaternion.Euler(transform.eulerAngles.x, eulerYangle, 0);
+        //float eulerYangle = Mathf.SmoothDampAngle(transform.eulerAngles.y, target.localEulerAngles.y, ref rotateVel, lookSmoth);
+        //transform.rotation = Quaternion.Euler(transform.eulerAngles.x, eulerYangle, 0);
+        //transform.LookAt(target);
     }
 }
