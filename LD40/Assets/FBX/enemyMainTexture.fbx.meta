@@ -1,0 +1,227 @@
+fileFormatVersion: 2
+guid: 53c44251f454e2e45aff7eb13f7ab5a4
+timeCreated: 1512223002
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: cylinder12
+    100002: cylinder13
+    100004: cylinder14
+    100006: cylinder15
+    100008: cylinder16
+    100010: cylinder17
+    100012: cylinder19
+    100014: cylinder2
+    100016: cylinder20
+    100018: cylinder21
+    100020: cylinder22
+    100022: cylinder23
+    100024: cylinder24
+    100026: cylinder25
+    100028: cylinder26
+    100030: cylinder27
+    100032: cylinder28
+    100034: cylinder29
+    100036: cylinder30
+    100038: cylinder31
+    100040: cylinder4
+    100042: cylinder5
+    100044: cylinder6
+    100046: cylinder7
+    100048: cylinder8
+    100050: cylinder9
+    100052: //RootNode
+    100054: sphere
+    400000: cylinder12
+    400002: cylinder13
+    400004: cylinder14
+    400006: cylinder15
+    400008: cylinder16
+    400010: cylinder17
+    400012: cylinder19
+    400014: cylinder2
+    400016: cylinder20
+    400018: cylinder21
+    400020: cylinder22
+    400022: cylinder23
+    400024: cylinder24
+    400026: cylinder25
+    400028: cylinder26
+    400030: cylinder27
+    400032: cylinder28
+    400034: cylinder29
+    400036: cylinder30
+    400038: cylinder31
+    400040: cylinder4
+    400042: cylinder5
+    400044: cylinder6
+    400046: cylinder7
+    400048: cylinder8
+    400050: cylinder9
+    400052: //RootNode
+    400054: sphere
+    2300000: cylinder12
+    2300002: cylinder13
+    2300004: cylinder14
+    2300006: cylinder15
+    2300008: cylinder16
+    2300010: cylinder17
+    2300012: cylinder19
+    2300014: cylinder2
+    2300016: cylinder20
+    2300018: cylinder21
+    2300020: cylinder22
+    2300022: cylinder23
+    2300024: cylinder24
+    2300026: cylinder25
+    2300028: cylinder26
+    2300030: cylinder27
+    2300032: cylinder28
+    2300034: cylinder29
+    2300036: cylinder30
+    2300038: cylinder31
+    2300040: cylinder4
+    2300042: cylinder5
+    2300044: cylinder6
+    2300046: cylinder7
+    2300048: cylinder8
+    2300050: cylinder9
+    2300052: sphere
+    3300000: cylinder12
+    3300002: cylinder13
+    3300004: cylinder14
+    3300006: cylinder15
+    3300008: cylinder16
+    3300010: cylinder17
+    3300012: cylinder19
+    3300014: cylinder2
+    3300016: cylinder20
+    3300018: cylinder21
+    3300020: cylinder22
+    3300022: cylinder23
+    3300024: cylinder24
+    3300026: cylinder25
+    3300028: cylinder26
+    3300030: cylinder27
+    3300032: cylinder28
+    3300034: cylinder29
+    3300036: cylinder30
+    3300038: cylinder31
+    3300040: cylinder4
+    3300042: cylinder5
+    3300044: cylinder6
+    3300046: cylinder7
+    3300048: cylinder8
+    3300050: cylinder9
+    3300052: sphere
+    4300000: sphere
+    4300002: cylinder2
+    4300004: cylinder4
+    4300006: cylinder5
+    4300008: cylinder6
+    4300010: cylinder7
+    4300012: cylinder8
+    4300014: cylinder9
+    4300016: cylinder12
+    4300018: cylinder13
+    4300020: cylinder14
+    4300022: cylinder15
+    4300024: cylinder16
+    4300026: cylinder17
+    4300028: cylinder19
+    4300030: cylinder20
+    4300032: cylinder21
+    4300034: cylinder22
+    4300036: cylinder23
+    4300038: cylinder24
+    4300040: cylinder25
+    4300042: cylinder26
+    4300044: cylinder27
+    4300046: cylinder28
+    4300048: cylinder29
+    4300050: cylinder30
+    4300052: cylinder31
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scene_Material
+    second: {fileID: 2100000, guid: 1de42331d7850984895d4f4fa2bbd047, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
