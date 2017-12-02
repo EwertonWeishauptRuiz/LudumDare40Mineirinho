@@ -34,8 +34,7 @@ public class ArrowWallBehaviour : MonoBehaviour {
     IEnumerator ShootArrows () {
         int i = 0;
         while (true){ 
-            ArrowLocation();
-            print(mySpawn);
+            ArrowLocation();            
             i++;
             if(i > 19) {
                 StopCoroutine("ShootArrows");

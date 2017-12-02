@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114604040263580292}
   m_Layer: 0
   m_Name: ArrowWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,9 +52,10 @@ GameObject:
   - component: {fileID: 4541031227543454}
   - component: {fileID: 33855673431411504}
   - component: {fileID: 23145881483258370}
+  - component: {fileID: 64890769318045326}
   m_Layer: 0
   m_Name: WoodWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,6 +70,7 @@ GameObject:
   - component: {fileID: 4854348432090714}
   - component: {fileID: 33652290603943314}
   - component: {fileID: 23840094867403934}
+  - component: {fileID: 64258162060155372}
   m_Layer: 0
   m_Name: Rock Arrow Wall
   m_TagString: Untagged
@@ -213,6 +215,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1843227012156822}
   m_Mesh: {fileID: 4300000, guid: 142c4f6e56e51b34da89682810a4385c, type: 3}
+--- !u!64 &64258162060155372
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1920076141874066}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 7fddef0cc464116438a47a0fd80682da, type: 3}
+--- !u!64 &64890769318045326
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843227012156822}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 142c4f6e56e51b34da89682810a4385c, type: 3}
 --- !u!114 &114604040263580292
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -224,5 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cfbcc3392818a541bb3757d0c35c908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPlace: {fileID: 0}
+  spawnPlace: {fileID: 4557182889377484}
   arrow: {fileID: 1643636010611062, guid: cb9b4ff46229c1443b433577e361dbe9, type: 2}
+  step: 0
+  reversePosition: 0

@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class ArrowsBehaviour : MonoBehaviour {
 
-    OnColissionEnter(Collision col) {
-
+    void OnCollisionEnter(Collision col) {
+        if(col.gameObject.tag == "Wall" || col.gameObject.tag == "Player") {
+            print("Hit Arrow");
+            Destroy(gameObject);
+        }
     }
 }
