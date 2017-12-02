@@ -32,9 +32,11 @@ public class PlayerController : MonoBehaviour
     public InputSettings inputSettings = new InputSettings();
 
     Vector3 velocity = Vector3.zero;
+    float gravityVel = 0;
     Quaternion targetRotation;
     Rigidbody rBody;
     float forwardInput, turnInput;
+    float camRayLength = 100f;
 
     public Quaternion TargetRotation
     {
@@ -74,17 +76,20 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         GetInput();
-        Turn();
-        
+        //Turn();
+
+        FollowMouse();
+
     }
 
     void FixedUpdate()
     {
         Run();
-        Airborne();
-        rBody.velocity = transform.TransformDirection(velocity);
+        //Airborne();
+        //rBody.velocity = transform.TransformDirection(velocity);
+        rBody.MovePosition(transform.position + velocity);
 
-        
+
     }
 
     void Run()
@@ -98,28 +103,69 @@ public class PlayerController : MonoBehaviour
         {
             velocity.z = 0;
         }
-    }
-
-    void Turn()
-    {
         if (Mathf.Abs(turnInput) > inputSettings.inputDelay)
         {
-            targetRotation *= Quaternion.AngleAxis(moveSettings.rotateVel * turnInput * Time.deltaTime, Vector3.up);
-        }
-        transform.rotation = targetRotation;
-    }
-
-    void Airborne()
-    {
-        if (!Grounded())
-        {
-            Debug.Log("not grounded");
-            velocity.y -= physSettings.downAccel;
+            velocity.x = moveSettings.forwardVel * turnInput;
         }
         else
         {
-            velocity.y = 0;
+            velocity.x = 0;
         }
+    }
+
+    //void Turn()
+    //{
+    //    if (Mathf.Abs(turnInput) > inputSettings.inputDelay)
+    //    {
+    //        targetRotation *= Quaternion.AngleAxis(moveSettings.rotateVel * turnInput * Time.deltaTime, Vector3.up);
+    //    }
+    //    transform.rotation = targetRotation;
+    //}
+
+    //void Airborne()
+    //{
+    //    if (!Grounded())
+    //    {
+    //        Debug.Log("not grounded");
+    //        velocity.y -= physSettings.downAccel;
+    //    }
+    //    else
+    //    {
+    //        velocity.y = 0;
+    //    }
+    //}
+
+    void FollowMouse()
+    {
+
+
+        // Create a ray from the mouse cursor on screen in the direction of the camera.
+        Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
+
+        // Create a RaycastHit variable to store information about what was hit by the ray.
+        RaycastHit floorHit;
+
+        // Perform the raycast and if it hits something on the floor layer...
+        if(Physics.Raycast (camRay, out floorHit, camRayLength, moveSettings.ground))
+        {
+            // Create a vector from the player to the point on the floor the raycast from the mouse hit.
+            Vector3 playerToMouse = floorHit.point - transform.position;
+
+            // Ensure the vector is entirely along the floor plane.
+            playerToMouse.y = 0f;
+
+            // Create a quaternion (rotation) based on looking down the vector from the player to the mouse.
+            Quaternion newRotation = Quaternion.LookRotation (playerToMouse);
+
+            // Set the player's rotation to this new rotation.
+            rBody.MoveRotation(newRotation);
+    }
+
+
+        //float distance = transform.position.z - Camera.main.transform.position.z;
+        //Vector3 position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
+        //position = Camera.main.ScreenToWorldPoint(position);
+        //transform.LookAt(new Vector3(transform.position.x, position.y, transform.position.z)); 
     }
 
 }
