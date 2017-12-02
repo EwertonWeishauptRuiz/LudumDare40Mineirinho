@@ -7,15 +7,56 @@ public class CameraControl : MonoBehaviour
 {
 
     public Transform target;
-    public Vector3 offset;
-    public float smoothTime = 0.3f;
-    Vector3 velocity = Vector3.zero;
-    
+    public float lookSmoth = 0.09f;
+    public Vector3 offsetFromTarget = new Vector3(0, 6, -8);
+    public float xTilt = 10;
 
-    private void FixedUpdate()
+    Vector3 destination = Vector3.zero;
+    PlayerController charController;
+    float rotateVel = 0;
+
+    private void Start()
     {
-        Vector3 desiredPosition = target.position + offset;
+        SetCameraTarget(target);
+    }
 
-        transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref velocity, smoothTime);
+    void SetCameraTarget(Transform t)
+    {
+        target = t;
+
+        if (target != null)
+        {
+            if (target.GetComponent<PlayerController>())
+            {
+                charController = target.GetComponent<PlayerController>();
+            }
+            else
+            {
+                Debug.Log("Camera target needs char controller");
+            }
+        }
+        else
+        {
+            Debug.Log("Camera needs target");
+        }
+    }
+
+    void LateUpdate()
+    {
+        MoveToTarget();
+        LookAtTarget();
+    }
+
+    void MoveToTarget()
+    {
+        destination = charController.TargetRotation * offsetFromTarget;
+        destination += target.position;
+        transform.position = destination;
+    }
+
+    void LookAtTarget()
+    {
+        float eulerYangle = Mathf.SmoothDampAngle(transform.eulerAngles.y, target.localEulerAngles.y, ref rotateVel, lookSmoth);
+        transform.rotation = Quaternion.Euler(transform.eulerAngles.x, eulerYangle, 0);
     }
 }
