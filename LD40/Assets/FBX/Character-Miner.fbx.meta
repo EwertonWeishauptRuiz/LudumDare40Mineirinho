@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: 7a70659b4f0c4da47b1d9d4406bb6b65
+timeCreated: 1512217147
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: eue
+    100004: eye
+    100006: hand
+    100008: hand1
+    100010: Hat
+    100012: Light_light
+    100014: Light_oustide
+    100016: polymsh
+    100018: Stashe
+    100020: Torso
+    400000: //RootNode
+    400002: eue
+    400004: eye
+    400006: hand
+    400008: hand1
+    400010: Hat
+    400012: Light_light
+    400014: Light_oustide
+    400016: polymsh
+    400018: Stashe
+    400020: Torso
+    2300000: eue
+    2300002: eye
+    2300004: hand
+    2300006: hand1
+    2300008: Hat
+    2300010: Light_light
+    2300012: Light_oustide
+    2300014: polymsh
+    2300016: Stashe
+    2300018: Torso
+    3300000: eue
+    3300002: eye
+    3300004: hand
+    3300006: hand1
+    3300008: Hat
+    3300010: Light_light
+    3300012: Light_oustide
+    3300014: polymsh
+    3300016: Stashe
+    3300018: Torso
+    4300000: eye
+    4300002: eue
+    4300004: Torso
+    4300006: hand1
+    4300008: Stashe
+    4300010: Hat
+    4300012: Light_oustide
+    4300014: Light_light
+    4300016: hand
+    4300018: polymsh
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Phong
+    second: {fileID: 2100000, guid: 54db36aa789217b439921fed137a13ec, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
