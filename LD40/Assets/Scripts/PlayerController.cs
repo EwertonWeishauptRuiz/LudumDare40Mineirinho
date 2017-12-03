@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     float camRayLength = 100f;
     float stepDownSpeed = 0.9f;
     float minSpeed;
-    float walkSpeed;
+    public float walkSpeed;
 
     public float lightWalkSpeed;
     public float rotateVel = 100;
@@ -105,5 +105,10 @@ public class PlayerController : MonoBehaviour
     public void ResetSpeed()
     {
         walkSpeed = lightWalkSpeed;
+    }
+
+    public void StepUpSpeed()
+    {
+        walkSpeed = walkSpeed * (1 / 0.9f);
     }
 }

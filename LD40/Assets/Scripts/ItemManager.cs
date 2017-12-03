@@ -42,11 +42,28 @@ public class ItemManager : MonoBehaviour {
 
     public void DropPoint()
     {
-        score += carryingGold * 20;
-        carryingGold = 0;
-        score += carryingSilver * 10;
-        carryingSilver = 0;
-        carryingTotal = 0;
-        playerController.ResetSpeed();
+        if (carryingTotal > 0)
+        {
+            carryingTotal -= 1;
+            playerController.StepUpSpeed();
+
+            if (carryingGold > 0)
+            {
+                carryingGold -= 1;
+                score += 20;
+            }
+            else if (carryingSilver > 0)
+            {
+                carryingSilver -= 1;
+                score += 10;
+                carryingTotal -= 1;
+            }
+        }
+        
+        if(carryingTotal == 0)
+        {
+            playerController.ResetSpeed();
+        }
+        
     }
 }
