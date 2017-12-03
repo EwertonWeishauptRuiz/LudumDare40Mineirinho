@@ -26,12 +26,17 @@ public class Item : MonoBehaviour {
 	    	
 	}
 
-    private void OnTriggerEnter(Collider other)
+    private void OnMouseDown()
     {
-        if (other.tag == "Player")
+        float dist = Vector3.Distance(transform.position, pItemManager.transform.position);
+        if (dist < 2.5f)
         {
             pItemManager.ItemPicked(itemType);
+            Debug.Log("Picked");
         }
-            
+        else
+        {
+            Debug.Log("Too far");
+        }
     }
 }
