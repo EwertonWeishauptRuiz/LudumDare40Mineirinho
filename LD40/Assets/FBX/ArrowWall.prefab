@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4321429902965164}
   - component: {fileID: 114604040263580292}
+  - component: {fileID: 65213279739876362}
   m_Layer: 0
   m_Name: ArrowWall
   m_TagString: Wall
@@ -73,7 +74,7 @@ GameObject:
   - component: {fileID: 64258162060155372}
   m_Layer: 0
   m_Name: Rock Arrow Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,8 +85,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1077737705252220}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.36802, y: 2.8357427, z: 1.3194699}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.7880201, y: 0.3557427, z: 0.26946998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4541031227543454}
@@ -93,7 +94,7 @@ Transform:
   - {fileID: 4557182889377484}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180.00002, z: 0}
 --- !u!4 &4541031227543454
 Transform:
   m_ObjectHideFlags: 1
@@ -114,7 +115,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1334280902162130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.466, y: 0.115, z: 4.512}
+  m_LocalPosition: {x: -1.605, y: 0.115, z: 4.512}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4321429902965164}
@@ -243,6 +244,18 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 142c4f6e56e51b34da89682810a4385c, type: 3}
+--- !u!65 &65213279739876362
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1077737705252220}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: -3.89, y: 0, z: 3.64}
 --- !u!114 &114604040263580292
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -258,3 +271,5 @@ MonoBehaviour:
   arrow: {fileID: 1643636010611062, guid: cb9b4ff46229c1443b433577e361dbe9, type: 2}
   step: 0
   reversePosition: 0
+  active: 0
+  arrowController: {fileID: 0}
