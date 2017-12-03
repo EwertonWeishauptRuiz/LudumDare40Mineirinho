@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4321429902965164}
   - component: {fileID: 114604040263580292}
   - component: {fileID: 65213279739876362}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ArrowWall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -36,9 +36,25 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4557182889377484}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnLocationRight
   m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1570835076884100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4435572428920460}
+  - component: {fileID: 65479147031562824}
+  m_Layer: 0
+  m_Name: KillArrows
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +70,8 @@ GameObject:
   - component: {fileID: 33855673431411504}
   - component: {fileID: 23145881483258370}
   - component: {fileID: 64890769318045326}
-  m_Layer: 0
+  - component: {fileID: 65638845779960206}
+  m_Layer: 9
   m_Name: WoodWall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -71,8 +88,7 @@ GameObject:
   - component: {fileID: 4854348432090714}
   - component: {fileID: 33652290603943314}
   - component: {fileID: 23840094867403934}
-  - component: {fileID: 64258162060155372}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rock Arrow Wall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -92,9 +108,23 @@ Transform:
   - {fileID: 4541031227543454}
   - {fileID: 4854348432090714}
   - {fileID: 4557182889377484}
+  - {fileID: 4435572428920460}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180.00002, z: 0}
+--- !u!4 &4435572428920460
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1570835076884100}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.78, y: 0, z: -0.29}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4321429902965164}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4541031227543454
 Transform:
   m_ObjectHideFlags: 1
@@ -115,7 +145,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1334280902162130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.605, y: 0.115, z: 4.512}
+  m_LocalPosition: {x: -1.574, y: 0.115, z: 4.512}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4321429902965164}
@@ -216,20 +246,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1843227012156822}
   m_Mesh: {fileID: 4300000, guid: 142c4f6e56e51b34da89682810a4385c, type: 3}
---- !u!64 &64258162060155372
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1920076141874066}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 7fddef0cc464116438a47a0fd80682da, type: 3}
 --- !u!64 &64890769318045326
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -238,7 +254,7 @@ MeshCollider:
   m_GameObject: {fileID: 1843227012156822}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Convex: 0
   m_InflateMesh: 0
@@ -256,6 +272,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: -3.89, y: 0, z: 3.64}
+--- !u!65 &65479147031562824
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1570835076884100}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 9.8}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65638845779960206
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843227012156822}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.11, y: 0.08523191, z: 0.41130745}
+  m_Center: {x: 0.145, y: 0.037112433, z: 0.0008064583}
 --- !u!114 &114604040263580292
 MonoBehaviour:
   m_ObjectHideFlags: 1
