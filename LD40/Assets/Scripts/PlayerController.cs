@@ -14,8 +14,9 @@ public class PlayerController : MonoBehaviour
     float camRayLength = 100f;
     float stepDownSpeed = 0.9f;
     float minSpeed;
+    float walkSpeed;
 
-    public float walkSpeed;
+    public float lightWalkSpeed;
     public float rotateVel = 100;
     public float distToGrounded = 0.1f;
     public LayerMask ground;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
         else
             Debug.LogError("Char needs rigidbody");
         forwardInput = turnInput = 0;
+        walkSpeed = lightWalkSpeed;
     }
 
     void GetInput()
@@ -98,5 +100,10 @@ public class PlayerController : MonoBehaviour
     public void SpeedDown()
     {
         walkSpeed = walkSpeed * stepDownSpeed;
+    }
+
+    public void ResetSpeed()
+    {
+        walkSpeed = lightWalkSpeed;
     }
 }
