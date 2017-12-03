@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        walkSpeed = 0.5f;
         targetRotation = transform.rotation;
         if (GetComponent<Rigidbody>())
             rBody = GetComponent<Rigidbody>();
