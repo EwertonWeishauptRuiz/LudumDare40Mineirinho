@@ -10,12 +10,10 @@ public class EnemyBehaviour : MonoBehaviour {
     float minDistance = .5f;
     int maxDistance = 5;
 
-	// Use this for initialization
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
         transform.LookAt(target);
 
