@@ -13,4 +13,14 @@ public class BallBehaviour : MonoBehaviour {
         }		
         lifeTime -= Time.deltaTime;        
 	}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            PlayerHealth pHealth = collision.gameObject.GetComponent<PlayerHealth>();
+            pHealth.TakeHit();
+            Destroy(gameObject);
+        }
+    }
 }
