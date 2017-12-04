@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4936395673657478}
   - component: {fileID: 95224523935850086}
+  - component: {fileID: 114725465575318318}
   m_Layer: 0
   m_Name: Character-Miner
   m_TagString: Untagged
@@ -140,7 +141,6 @@ GameObject:
   - component: {fileID: 114377467476620794}
   - component: {fileID: 114306077565303564}
   - component: {fileID: 114216069471072316}
-  - component: {fileID: 95525651483962258}
   - component: {fileID: 82197563322839754}
   m_Layer: 0
   m_Name: PlayerPrefab
@@ -319,7 +319,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1501709574668814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.2639084, y: 2.206, z: -17.964222}
+  m_LocalPosition: {x: 4.3830085, y: 1.9553871, z: -21.677418}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4936395673657478}
@@ -1049,24 +1049,7 @@ Animator:
   m_GameObject: {fileID: 1055305858825088}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c25e3a134c4998e42b21880277303c9b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95525651483962258
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1501709574668814}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: af5ad44b3aacbcb4f8f77ac2411b3b20, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7ba4d965177bdc64f84b0ef617fdc5fb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1122,6 +1105,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   inputDelay: 0.1
+--- !u!114 &114725465575318318
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055305858825088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f7658be77177c499f0b96c0fef3785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136132420831915670
 CapsuleCollider:
   m_ObjectHideFlags: 1
