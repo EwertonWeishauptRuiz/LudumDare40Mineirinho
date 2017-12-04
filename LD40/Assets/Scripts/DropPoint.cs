@@ -58,11 +58,9 @@ public class DropPoint : MonoBehaviour {
             materialWood.color = Color.green;
             materialMetal.color = Color.green;
             pItemManager.DropPoint(dropType);
-            Debug.Log("Droped");
         }
         else
         {
-            Debug.Log("Too far");
             materialWood.color = Color.red;
             materialMetal.color = Color.red;
         }

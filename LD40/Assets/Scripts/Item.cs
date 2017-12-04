@@ -7,6 +7,9 @@ public class Item : MonoBehaviour {
     ItemManager pItemManager;
     Material material;
     public int itemType;
+
+    public AudioClip hitMine;
+    AudioSource audiosorce;
     // itemType == 1 -> gold
     // itemType == 2 -> silver
 
@@ -14,6 +17,7 @@ public class Item : MonoBehaviour {
     {
         pItemManager = GameObject.FindGameObjectWithTag("Player").GetComponent<ItemManager>();
         material = GetComponent<Renderer>().material;
+        audiosorce = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -47,6 +51,7 @@ public class Item : MonoBehaviour {
             pItemManager.ItemPicked(itemType);
             Debug.Log("Picked");
             material.color = Color.green;
+            audiosorce.PlayOneShot(hitMine, 0.1f);
         }
         else
         {
