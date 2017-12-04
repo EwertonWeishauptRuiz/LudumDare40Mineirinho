@@ -6,16 +6,35 @@ public class IndianaBallController : MonoBehaviour {
 
     public Transform spawnLocation;
     public GameObject ballPrefab;
+    public Vector3 ballForce;
+
+    float timer;
+    bool started;
     
     // Use this for initialization
     void Start() {
-        StartCoroutine("SpawnBall");
+        timer = 1f;
+        started = false;
     }
-    
+
+    private void Update()
+    {
+        if(!started)
+        {
+            if(timer > 0)
+                timer -= Time.deltaTime; 
+            else
+            {
+                started = true;
+                StartCoroutine("SpawnBall");
+            }
+        }
+    }
+
     void Instantiateball() {
         GameObject ball = Instantiate(ballPrefab, spawnLocation.transform.position, Quaternion.Euler(0, 0, 90));
         Rigidbody rbd = ball.GetComponent<Rigidbody>();
-        rbd.velocity = new Vector3(0, 0, -20);
+        rbd.AddForce(ballForce, ForceMode.Impulse);
     }
 
     public IEnumerator SpawnBall() {
