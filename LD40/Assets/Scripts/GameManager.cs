@@ -19,8 +19,46 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    public float timeLimit;
+    public bool gameOver;
+
+
+    float finalScore;
+    // 1 == killed, 2 == time is over
+    int overType;
+    float gameTimer;
+
+    ItemManager pItemManager;
+
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
     }
+
+    private void Update()
+    {
+        gameTimer += Time.deltaTime;
+
+        if(gameTimer > timeLimit)
+        {
+            GameOver(2);
+        }
+    }
+
+    public void GameOver(int deathby)
+    {
+        gameOver = true;
+        overType = deathby;
+        finalScore = pItemManager.score;
+    }
+
+    public void StartGame()
+    {
+        gameTimer = 0;
+        overType = 0;
+        gameOver = false;
+        pItemManager = GameObject.FindGameObjectWithTag("Player").GetComponent<ItemManager>();
+    }
+
+
 }
