@@ -9,10 +9,13 @@ public class ItemManager : MonoBehaviour {
     public int score;
     int carryingTotal;
     PlayerController playerController;
+    public AudioClip dropSound;
+    AudioSource audioSource;
 
     private void Awake()
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -50,6 +53,7 @@ public class ItemManager : MonoBehaviour {
                 carryingGold -= 1;
                 score += 20;
                 playerController.StepUpSpeed();
+                audioSource.PlayOneShot(dropSound, 0.1f);
             }
             if (dropType == 2 && carryingSilver > 0)
             {
@@ -57,6 +61,7 @@ public class ItemManager : MonoBehaviour {
                 carryingTotal -= 1;
                 score += 10;
                 playerController.StepUpSpeed();
+                audioSource.PlayOneShot(dropSound, 0.1f);
             }
         }
         
