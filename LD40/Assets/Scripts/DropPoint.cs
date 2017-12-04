@@ -8,10 +8,15 @@ public class DropPoint : MonoBehaviour {
 
     ItemManager pItemManager;
     bool canDrop;
+    public GameObject woodCart, metalCart;
+    Material materialWood, materialMetal;
 
     private void Awake()
     {
         pItemManager = GameObject.FindGameObjectWithTag("Player").GetComponent<ItemManager>();
+        materialWood = woodCart.GetComponent<Renderer>().material;
+        materialMetal = metalCart.GetComponent<Renderer>().material;
+
     }
 
     private void Start()
@@ -23,6 +28,7 @@ public class DropPoint : MonoBehaviour {
     {
         if(other.tag == "Player")
         {
+
             canDrop = true;
         }
     }
@@ -35,16 +41,35 @@ public class DropPoint : MonoBehaviour {
         }
     }
 
+    void OnMouseEnter() {
+        materialWood.color = Color.yellow;
+        materialMetal.color = Color.yellow ;
+    }
+
+    void OnMouseExit() {
+        materialWood.color = Color.white;
+        materialMetal.color = Color.white;
+    }
+
     private void OnMouseDown()
     {
         if(canDrop)
         {
+            materialWood.color = Color.green;
+            materialMetal.color = Color.green;
             pItemManager.DropPoint(dropType);
             Debug.Log("Droped");
         }
         else
         {
             Debug.Log("Too far");
+            materialWood.color = Color.red;
+            materialMetal.color = Color.red;
         }
+    }    
+
+    void OnMouseUp() {
+        materialWood.color = Color.yellow;
+        materialMetal.color = Color.yellow;
     }
 }

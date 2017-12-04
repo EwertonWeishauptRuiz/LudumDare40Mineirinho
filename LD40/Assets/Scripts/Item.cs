@@ -5,7 +5,7 @@ using UnityEngine;
 public class Item : MonoBehaviour {
 
     ItemManager pItemManager;
-
+    Material material;
     public int itemType;
     // itemType == 1 -> gold
     // itemType == 2 -> silver
@@ -13,6 +13,7 @@ public class Item : MonoBehaviour {
     private void Awake()
     {
         pItemManager = GameObject.FindGameObjectWithTag("Player").GetComponent<ItemManager>();
+        material = GetComponent<Renderer>().material;
     }
 
     private void Start()
@@ -26,6 +27,18 @@ public class Item : MonoBehaviour {
 	    	
 	}
 
+    void OnMouseEnter() {
+        material.color = Color.yellow;
+    }
+
+    void OnMouseExit() {
+        material.color = Color.white;
+    }
+
+    void OnMouseUp() {
+        material.color = Color.yellow;
+    }
+
     private void OnMouseDown()
     {
         float dist = Vector3.Distance(transform.position, pItemManager.transform.position);
@@ -33,10 +46,12 @@ public class Item : MonoBehaviour {
         {
             pItemManager.ItemPicked(itemType);
             Debug.Log("Picked");
+            material.color = Color.green;
         }
         else
         {
             Debug.Log("Too far");
+            material.color = Color.red;
         }
     }
 }
