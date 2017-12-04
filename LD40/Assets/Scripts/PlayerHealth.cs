@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour {
     public int initialHealth;
     public int health;
     public float imuneTime;
-
+	AnimBehaviour animScript;
     ItemManager pItemManager;
     bool imune;
     float timer;
@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour {
         imune = false;
         health = initialHealth;
         timer = imuneTime;
+		animScript = GetComponent <AnimBehaviour> ();
 	}
 
     private void Update()
@@ -27,6 +28,7 @@ public class PlayerHealth : MonoBehaviour {
         if (timer <= 0)
         {
             imune = false;
+
             timer = imuneTime;
         }
         
@@ -40,6 +42,7 @@ public class PlayerHealth : MonoBehaviour {
     {
         if (!imune)
         {
+			animScript.Hurt ();
             health -= 1;
             pItemManager.GetHit();
             imune = true;
