@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class UIBehaviour : MonoBehaviour {
-    int health;
+    PlayerHealth healthScript;
     Text hpLeft;
 
  void Start () {
-        hpLeft.text = GetComponent<Text>().text;
-    health = GameObject.FindObjectOfType<PlayerHealth>().health;
+    hpLeft = GetComponent<Text>();
+    healthScript = GameObject.FindObjectOfType<PlayerHealth>();
     }
     void Update()    {
-        hpLeft.text = "x" + health;
+        
+        hpLeft.text = "x" + healthScript.health;
     }
 }
