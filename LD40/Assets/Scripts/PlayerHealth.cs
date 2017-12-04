@@ -29,6 +29,11 @@ public class PlayerHealth : MonoBehaviour {
             imune = false;
             timer = imuneTime;
         }
+        
+        if (health < 0)
+        {
+            GameManager.Instance.GameOver(1);
+        }
     }
 
     public void TakeHit()

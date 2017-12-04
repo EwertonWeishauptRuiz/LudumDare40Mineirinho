@@ -13,7 +13,6 @@ public class SpikeController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        print(doorBehaviour.Length);
         allAdvanced = false;
         allRetreated = true;
         timer = holdTime;
