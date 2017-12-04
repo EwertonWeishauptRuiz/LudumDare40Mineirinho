@@ -5,29 +5,41 @@ using UnityEngine;
 public class SpikeController : MonoBehaviour {
     
     public SpikesBehaviour[] doorBehaviour;
-    bool allAdvanced;
     public float holdTime;
-    float time;
 
-    bool step;
+    float timer;
+    bool allAdvanced;
+    bool allRetreated;
+
 	// Use this for initialization
 	void Start () {
         print(doorBehaviour.Length);
-        StartCoroutine("AdvanceWalls");
-        time = Time.time;
+        allAdvanced = false;
+        allRetreated = true;
+        timer = holdTime;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if(allAdvanced) {
-            holdTime -= Time.deltaTime;
-            if (holdTime < 0) {
-                StartCoroutine("RetreatWalls");
-            }
+
+        if(timer <= 0 && allRetreated)
+        {
+            StartCoroutine("AdvanceWalls");
+        }
+        else if ( timer <= 0 && allAdvanced)
+        {
+            StartCoroutine("RetreatWalls");
+        }
+
+        if (allAdvanced || allRetreated)
+        {
+            timer -= Time.deltaTime;
         }
 	}
 
     IEnumerator AdvanceWalls() {
+        allAdvanced = false;
+        allRetreated = false;
         int i = 1;
         while (true) {
             doorBehaviour[i-1].advance = true;
@@ -35,13 +47,17 @@ public class SpikeController : MonoBehaviour {
             i++;
             if(i > doorBehaviour.Length / 2 + 1) {
                 StopCoroutine("AdvanceWalls");
-                allAdvanced = true;               
+                allAdvanced = true;
+                allRetreated = false;
+                timer = holdTime;
             }            
             yield return new WaitForSeconds(0.2f);
         }
     }
 
     IEnumerator RetreatWalls() {
+        allAdvanced = false;
+        allRetreated = false;
         int i = 1;
         while (true) {
             doorBehaviour[i-1].backward = true;
@@ -49,21 +65,11 @@ public class SpikeController : MonoBehaviour {
             i++;
             if (i > doorBehaviour.Length / 2  + 1) {
                 StopCoroutine("RetreatWalls");
-                allAdvanced = true;
+                allAdvanced = false;
+                allRetreated = true;
+                timer = holdTime;
             }
             yield return new WaitForSeconds(0.2f);
-        }
-    }
-
-    void OnTriggerEnter(Collider col) {
-        if (col.gameObject.tag == "Player") {
-            step = true;
-        }
-    }
-
-    void OnTriggerExit(Collider col) {
-        if (col.gameObject.tag == "Player") {
-            step = false;
         }
     }
 }
