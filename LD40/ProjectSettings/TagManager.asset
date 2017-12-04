@@ -7,6 +7,9 @@ TagManager:
   - Objective
   - Wall
   - TriggerArrows
+  - HP
+  - Gold
+  - Silver
   layers:
   - Default
   - TransparentFX
