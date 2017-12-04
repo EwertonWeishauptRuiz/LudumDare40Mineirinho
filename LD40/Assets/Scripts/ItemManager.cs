@@ -66,4 +66,12 @@ public class ItemManager : MonoBehaviour {
         }
         
     }
+
+    public void GetHit()
+    {
+        carryingGold = 0;
+        carryingSilver = 0;
+        carryingTotal = 0;
+        playerController.ResetSpeed();
+    }
 }

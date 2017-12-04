@@ -87,4 +87,13 @@ public class EnemyMovement : MonoBehaviour {
             playerNear = false;
         }
     }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.transform.tag == "Player")
+        {
+            PlayerHealth pHealth = collision.transform.GetComponent<PlayerHealth>();
+            pHealth.TakeHit();
+        }
+    }
 }

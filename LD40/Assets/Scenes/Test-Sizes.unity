@@ -2638,6 +2638,11 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198953834844688934, guid: 614c757b7c717a245b7899f1e5748736,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 614c757b7c717a245b7899f1e5748736, type: 2}
   m_IsPrefabParent: 0
@@ -5490,6 +5495,7 @@ GameObject:
   - component: {fileID: 956987811}
   - component: {fileID: 956987809}
   - component: {fileID: 956987810}
+  - component: {fileID: 956987813}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5560,6 +5566,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!114 &956987813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 956987808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9738d35f4a49dab409e2812b87f745a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialHealth: 3
+  health: 0
+  imuneTime: 3
 --- !u!1 &981898922
 GameObject:
   m_ObjectHideFlags: 0
