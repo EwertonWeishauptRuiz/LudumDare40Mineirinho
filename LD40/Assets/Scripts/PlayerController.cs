@@ -51,31 +51,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Run();
-        //rBody.MovePosition(transform.position + velocity);
-        rBody.AddForce(velocity);
-
-        Debug.Log(rBody.velocity);
+        rBody.AddForce(turnInput * walkSpeed, 0, forwardInput * walkSpeed);
     }
 
     void Run()
     {
-        if (Mathf.Abs(forwardInput) > inputDelay)
-        {
-            velocity.z = walkSpeed * forwardInput;
-        }
-        else
-        {
-            velocity.z = 0;
-        }
-        if (Mathf.Abs(turnInput) > inputDelay)
-        {
-            velocity.x = walkSpeed * turnInput;
-        }
-        else
-        {
-            velocity.x = 0;
-        }
     }
 
     void FollowMouse()
