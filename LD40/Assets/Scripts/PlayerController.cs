@@ -52,7 +52,10 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Run();
-        rBody.MovePosition(transform.position + velocity);
+        //rBody.MovePosition(transform.position + velocity);
+        rBody.AddForce(velocity);
+
+        Debug.Log(rBody.velocity);
     }
 
     void Run()
