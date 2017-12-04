@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class AnimBehaviour : MonoBehaviour {
 	Animator playerAnim;
-	PlayerController walkScript;
+	Rigidbody playerRb;
 	PlayerHealth damageScript;
 	float currentWalkingSpeed;
 
 	void Start () {
 		playerAnim = GetComponent<Animator> ();
-		walkScript = FindObjectOfType<PlayerController> ();
 		damageScript = FindObjectOfType<PlayerHealth> ();
+		playerRb = GameObject.FindGameObjectWithTag ("Player").GetComponent<Rigidbody>();
+
 	}
 	void Update () {
-		currentWalkingSpeed = walkScript.walkSpeed;
+		currentWalkingSpeed = Mathf.Abs(playerRb.velocity.x) + Mathf.Abs( playerRb.velocity.z);
 		playerAnim.SetFloat ("CurrentWalkingSpeed", currentWalkingSpeed);
 
 
