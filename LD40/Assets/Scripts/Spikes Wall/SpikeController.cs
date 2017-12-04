@@ -28,11 +28,12 @@ public class SpikeController : MonoBehaviour {
 	}
 
     IEnumerator AdvanceWalls() {
-        int i = 0;
+        int i = 1;
         while (true) {
-            doorBehaviour[i].advance = true;
+            doorBehaviour[i-1].advance = true;
+            doorBehaviour[doorBehaviour.Length - i].advance = true;
             i++;
-            if(i > doorBehaviour.Length - 1) {
+            if(i > doorBehaviour.Length / 2 + 1) {
                 StopCoroutine("AdvanceWalls");
                 allAdvanced = true;               
             }            
@@ -41,11 +42,12 @@ public class SpikeController : MonoBehaviour {
     }
 
     IEnumerator RetreatWalls() {
-        int i = 0;
+        int i = 1;
         while (true) {
-            doorBehaviour[i].backward = true;
+            doorBehaviour[i-1].backward = true;
+            doorBehaviour[doorBehaviour.Length - i].backward = true;
             i++;
-            if (i > doorBehaviour.Length - 1) {
+            if (i > doorBehaviour.Length / 2  + 1) {
                 StopCoroutine("RetreatWalls");
                 allAdvanced = true;
             }

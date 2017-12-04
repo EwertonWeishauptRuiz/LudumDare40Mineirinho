@@ -2623,6 +2623,21 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198953834844688934, guid: 614c757b7c717a245b7899f1e5748736,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198953834844688934, guid: 614c757b7c717a245b7899f1e5748736,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198953834844688934, guid: 614c757b7c717a245b7899f1e5748736,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 614c757b7c717a245b7899f1e5748736, type: 2}
   m_IsPrefabParent: 0
@@ -3815,6 +3830,46 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 543378537}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &569789407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 569789409}
+  - component: {fileID: 569789408}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &569789408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 569789407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdd1dc1af950e3498d8e3ba2dce3450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &569789409
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 569789407}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.968853, y: 6.305027, z: -10.253661}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &573134133
 GameObject:
   m_ObjectHideFlags: 0
@@ -5436,7 +5491,7 @@ GameObject:
   - component: {fileID: 956987809}
   - component: {fileID: 956987810}
   m_Layer: 0
-  m_Name: ThirdPersonController
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5453,6 +5508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0e69e48590a9444691055cc75823e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkSpeed: 0
   lightWalkSpeed: 0.5
   rotateVel: 100
   distToGrounded: 0.1
