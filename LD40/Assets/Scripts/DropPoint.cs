@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DropPoint : MonoBehaviour {
 
+    public int dropType;
+
     ItemManager pItemManager;
     bool canDrop;
 
@@ -37,7 +39,7 @@ public class DropPoint : MonoBehaviour {
     {
         if(canDrop)
         {
-            pItemManager.DropPoint();
+            pItemManager.DropPoint(dropType);
             Debug.Log("Droped");
         }
         else

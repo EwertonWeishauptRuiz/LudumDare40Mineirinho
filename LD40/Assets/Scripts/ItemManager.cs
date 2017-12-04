@@ -40,23 +40,23 @@ public class ItemManager : MonoBehaviour {
         
     }
 
-    public void DropPoint()
+    public void DropPoint(int dropType)
     {
         if (carryingTotal > 0)
         {
-            carryingTotal -= 1;
-            playerController.StepUpSpeed();
-
-            if (carryingGold > 0)
+            if(dropType == 1 && carryingGold > 0)
             {
+                carryingTotal -= 1;
                 carryingGold -= 1;
                 score += 20;
+                playerController.StepUpSpeed();
             }
-            else if (carryingSilver > 0)
+            if (dropType == 2 && carryingSilver > 0)
             {
                 carryingSilver -= 1;
-                score += 10;
                 carryingTotal -= 1;
+                score += 10;
+                playerController.StepUpSpeed();
             }
         }
         
