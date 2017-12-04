@@ -2643,6 +2643,41 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198953834844688934, guid: 614c757b7c717a245b7899f1e5748736,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198953834844688934, guid: 614c757b7c717a245b7899f1e5748736,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198953834844688934, guid: 614c757b7c717a245b7899f1e5748736,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198953834844688934, guid: 614c757b7c717a245b7899f1e5748736,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198953834844688934, guid: 614c757b7c717a245b7899f1e5748736,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198953834844688934, guid: 614c757b7c717a245b7899f1e5748736,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198953834844688934, guid: 614c757b7c717a245b7899f1e5748736,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 614c757b7c717a245b7899f1e5748736, type: 2}
   m_IsPrefabParent: 0
@@ -5514,8 +5549,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0e69e48590a9444691055cc75823e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 0
-  lightWalkSpeed: 0.5
+  walkSpeed: 250
+  lightWalkSpeed: 250
   rotateVel: 100
   distToGrounded: 0.1
   ground:
@@ -5543,7 +5578,7 @@ CapsuleCollider:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 956987808}
-  m_Material: {fileID: 13400000, guid: 52baaeb214519f347a35cf0edfd262ff, type: 2}
+  m_Material: {fileID: 13400000, guid: 01571ba68fb2dad46aa03094ab219579, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.25054577
@@ -5559,13 +5594,13 @@ Rigidbody:
   m_GameObject: {fileID: 956987808}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 5
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!114 &956987813
 MonoBehaviour:
   m_ObjectHideFlags: 0
