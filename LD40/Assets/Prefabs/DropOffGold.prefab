@@ -2525,3 +2525,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdbf00ac04bd9c1429323f9d8bbad33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropType: 1
+  woodCart: {fileID: 1940625092116978}
+  metalCart: {fileID: 1478661875917358}

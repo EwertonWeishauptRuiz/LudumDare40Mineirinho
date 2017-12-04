@@ -10,12 +10,15 @@ public class DropPoint : MonoBehaviour {
     bool canDrop;
     public GameObject woodCart, metalCart;
     Material materialWood, materialMetal;
+    public AudioClip dropSound;
+    AudioSource audioSource;
 
     private void Awake()
     {
         pItemManager = GameObject.FindGameObjectWithTag("Player").GetComponent<ItemManager>();
         materialWood = woodCart.GetComponent<Renderer>().material;
         materialMetal = metalCart.GetComponent<Renderer>().material;
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -59,6 +62,7 @@ public class DropPoint : MonoBehaviour {
             materialMetal.color = Color.green;
             pItemManager.DropPoint(dropType);
             Debug.Log("Droped");
+            audioSource.PlayOneShot(dropSound, 0.1f);
         }
         else
         {
