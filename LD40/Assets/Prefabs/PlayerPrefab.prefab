@@ -970,7 +970,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fd750f7528993264c93e3b9dd7d1209b, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1102,7 +1102,7 @@ MonoBehaviour:
   carryingGold: 0
   carryingSilver: 0
   score: 0
-  dropSound: {fileID: 0}
+  dropSound: {fileID: 8300000, guid: fd750f7528993264c93e3b9dd7d1209b, type: 3}
 --- !u!114 &114377467476620794
 MonoBehaviour:
   m_ObjectHideFlags: 1
