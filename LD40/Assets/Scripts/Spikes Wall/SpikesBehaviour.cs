@@ -52,4 +52,13 @@ public class SpikesBehaviour : MonoBehaviour {
     void MoveBackward() {
         transform.position = Vector3.SmoothDamp(transform.position, initPos, ref velocity, timeToTarget);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            PlayerHealth pHealth = collision.gameObject.GetComponent<PlayerHealth>();
+            pHealth.TakeHit();
+        }
+    }
 }
