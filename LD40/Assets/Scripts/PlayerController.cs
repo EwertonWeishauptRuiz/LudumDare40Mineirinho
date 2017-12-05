@@ -39,8 +39,8 @@ public class PlayerController : MonoBehaviour
 
     void GetInput()
     {
-        forwardInput = Input.GetAxis("Vertical");
-        turnInput = Input.GetAxis("Horizontal");
+            forwardInput = Input.GetAxis("Vertical");
+            turnInput = Input.GetAxis("Horizontal");
     }
 
     void Update()
@@ -51,7 +51,9 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rBody.AddForce(turnInput * walkSpeed, 0, forwardInput * walkSpeed);
+    
+        if(!GameManager.Instance.gameOver)
+            rBody.AddForce(turnInput * walkSpeed, 0, forwardInput * walkSpeed);
     }
 
     void Run()

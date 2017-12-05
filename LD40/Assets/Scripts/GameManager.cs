@@ -39,10 +39,10 @@ public class GameManager : MonoBehaviour {
     {
         gameTimer += Time.deltaTime;
 
-        if(gameTimer > timeLimit)
-        {
-            GameOver(2);
-        }
+        //if(gameTimer > timeLimit)
+        //{
+        //    GameOver(2);
+        //}
     }
 
     public void GameOver(int deathby)
@@ -50,15 +50,22 @@ public class GameManager : MonoBehaviour {
         gameOver = true;
         overType = deathby;
         finalScore = pItemManager.score;
+        UIManager uiMan = GameObject.Find("GameStart").GetComponent<UIManager>();
+        uiMan.ShowEndScreen();
+        Debug.Log("Game OVER");
     }
 
     public void StartGame()
     {
         gameTimer = 0;
+        
         overType = 0;
         gameOver = false;
         pItemManager = GameObject.FindGameObjectWithTag("Player").GetComponent<ItemManager>();
+        
     }
+
+   
 
 
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemManager : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class ItemManager : MonoBehaviour {
     PlayerController playerController;
     public AudioClip dropSound;
     AudioSource audioSource;
+    public Text scoreFinal;
 
     private void Awake()
     {
@@ -24,6 +26,12 @@ public class ItemManager : MonoBehaviour {
         carryingSilver = 0;
         carryingTotal = 0;
         score = 0;
+    }
+
+    private void Update()
+    {
+        if (GameManager.Instance.gameOver == true)
+            scoreFinal.text = score.ToString();
     }
 
     // itemTypes> 1 == gold, 2 == silver

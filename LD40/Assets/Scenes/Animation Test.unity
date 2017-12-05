@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4468984, g: 0.49678397, b: 0.5750045, a: 1}
+  m_IndirectSpecularColor: {r: 0.44689876, g: 0.49678445, b: 0.5750057, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -4034,6 +4034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 908045230}
   - component: {fileID: 908045229}
+  - component: {fileID: 908045231}
   m_Layer: 0
   m_Name: GameStart
   m_TagString: Untagged
@@ -4065,6 +4066,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &908045231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 908045228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b2252aa1bbe944484cbcda2151722a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endScreen: {fileID: 1702879719}
 --- !u!1001 &908384363
 Prefab:
   m_ObjectHideFlags: 0
@@ -7312,12 +7325,12 @@ Prefab:
     - target: {fileID: 224526054801750328, guid: 65ef248bb8ff55b4eb1e0fc99d1db93a,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 497
+      value: 453
       objectReference: {fileID: 0}
     - target: {fileID: 224526054801750328, guid: 65ef248bb8ff55b4eb1e0fc99d1db93a,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 279.5
+      value: 214
       objectReference: {fileID: 0}
     - target: {fileID: 224526054801750328, guid: 65ef248bb8ff55b4eb1e0fc99d1db93a,
         type: 2}
@@ -7423,6 +7436,14 @@ Prefab:
         type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1407301339086894, guid: 65ef248bb8ff55b4eb1e0fc99d1db93a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656633780837226, guid: 65ef248bb8ff55b4eb1e0fc99d1db93a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65ef248bb8ff55b4eb1e0fc99d1db93a, type: 2}
@@ -9229,6 +9250,11 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 58164046e2b18b443addb63f62274c41, type: 3}
   m_PrefabInternal: {fileID: 1693795295}
+--- !u!1 &1702879719 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1656633780837226, guid: 65ef248bb8ff55b4eb1e0fc99d1db93a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1393633197}
 --- !u!1001 &1709581976
 Prefab:
   m_ObjectHideFlags: 0
