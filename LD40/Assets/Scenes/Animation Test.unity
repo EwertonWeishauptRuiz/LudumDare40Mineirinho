@@ -5398,7 +5398,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4061993933051210, guid: 5c14e98dce7711c4ebb84389edc001b0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.2639084
+      value: 18.4
       objectReference: {fileID: 0}
     - target: {fileID: 4061993933051210, guid: 5c14e98dce7711c4ebb84389edc001b0, type: 2}
       propertyPath: m_LocalPosition.y
@@ -6832,7 +6832,7 @@ MonoBehaviour:
   timer: 0
   initialPos: {x: 0, y: 0, z: 0}
   targetPos: {x: 3, y: 0, z: 3}
-  moveSpeed: 5
+  moveSpeed: 4
 --- !u!4 &1258604380
 Transform:
   m_ObjectHideFlags: 0
@@ -8566,7 +8566,7 @@ MonoBehaviour:
   timer: 0
   initialPos: {x: 0, y: 0, z: 0}
   targetPos: {x: 3, y: 0, z: 3}
-  moveSpeed: 5
+  moveSpeed: 4
 --- !u!65 &1615982270
 BoxCollider:
   m_ObjectHideFlags: 0
