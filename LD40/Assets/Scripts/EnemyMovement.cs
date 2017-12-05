@@ -60,6 +60,7 @@ public class EnemyMovement : MonoBehaviour {
 
         // Set the player's rotation to this new rotation.
         rBody.MoveRotation(newRotation);
+        transform.LookAt(pTransform.position); 
 
         transform.position = Vector3.MoveTowards(transform.position, pTransform.position, moveSpeed * Time.deltaTime);
     }
