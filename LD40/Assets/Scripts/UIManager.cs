@@ -18,9 +18,19 @@ public class UIManager : MonoBehaviour {
         endScreen.gameObject.SetActive(true);
     }
 
+    public void Update()
+    {
+        if(GameManager.Instance.gameOver)
+        {
+            if(Input.GetKey(KeyCode.R))
+            {
+                SceneManager.LoadScene("Animation Test", LoadSceneMode.Single);
+            }
+        }
+    }
+
     public void Retry()
     {
-        SceneManager.LoadScene("Animation Test", LoadSceneMode.Single);
     }
 
 	
