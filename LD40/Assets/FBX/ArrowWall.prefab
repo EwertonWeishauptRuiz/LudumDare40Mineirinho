@@ -101,8 +101,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1077737705252220}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.7880201, y: 0.3557427, z: 0.26946998}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.0000029653306}
+  m_LocalPosition: {x: -3.7006001, y: 0.3557427, z: -0.22014993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4541031227543454}
@@ -310,6 +310,6 @@ MonoBehaviour:
   spawnPlace: {fileID: 4557182889377484}
   arrow: {fileID: 1643636010611062, guid: cb9b4ff46229c1443b433577e361dbe9, type: 2}
   step: 0
-  reversePosition: 0
+  reversePosition: 1
   active: 0
   arrowController: {fileID: 0}
