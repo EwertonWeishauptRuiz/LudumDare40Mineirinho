@@ -32,7 +32,7 @@ public class PlayerHealth : MonoBehaviour {
             timer = imuneTime;
         }
         
-        if (health < 0)
+        if (health < 1)
         {
             GameManager.Instance.GameOver(1);
         }

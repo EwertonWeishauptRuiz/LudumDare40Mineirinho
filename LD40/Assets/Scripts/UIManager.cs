@@ -24,14 +24,9 @@ public class UIManager : MonoBehaviour {
         {
             if(Input.GetKey(KeyCode.R))
             {
+                Time.timeScale = 1;
                 SceneManager.LoadScene("Animation Test", LoadSceneMode.Single);
             }
         }
     }
-
-    public void Retry()
-    {
-    }
-
-	
 }

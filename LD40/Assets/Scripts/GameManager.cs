@@ -53,16 +53,16 @@ public class GameManager : MonoBehaviour {
         UIManager uiMan = GameObject.Find("GameStart").GetComponent<UIManager>();
         uiMan.ShowEndScreen();
         Debug.Log("Game OVER");
+        Time.timeScale = 0;
     }
 
     public void StartGame()
     {
         gameTimer = 0;
-        
         overType = 0;
         gameOver = false;
         pItemManager = GameObject.FindGameObjectWithTag("Player").GetComponent<ItemManager>();
-        
+        Time.timeScale = 1; 
     }
 
    
