@@ -20,7 +20,8 @@ public class UIManager : MonoBehaviour {
 
     public void Retry()
     {
-        SceneManager.LoadScene("Animation Test", LoadSceneMode.Single);
+        print("CLick");
+        SceneManager.LoadScene("Animation Test");
     }
 
 	
